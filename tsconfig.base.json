@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["node"],
+    "paths": {
+      "@ink/logistics": ["packages/logistics/src/index.ts"]
+    }
+  }
+}

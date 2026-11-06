@@ -1,0 +1,19 @@
+{
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "node_modules",
+      ".next",
+      ".git",
+      "dist",
+      "build",
+      "*.log",
+      ".env",
+      "package-lock.json",
+      "yarn.lock",
+      "**/weather_grid.json",
+      "kma_data.csv"
+    ]
+  }
+}

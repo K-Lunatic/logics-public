@@ -1,0 +1,12 @@
+.git
+.next
+node_modules
+**/node_modules
+**/.next
+.env
+.env.*
+!.env.pi.example
+backups
+.migration
+npm-debug.log
+pnpm-debug.log

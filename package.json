@@ -1,0 +1,12 @@
+{
+  "name": "logistics-monorepo",
+  "private": true,
+  "scripts": {
+    "db:migrate:firestore": "node --import tsx scripts/migrate-firestore-to-mysql.mts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.1",
+    "turbo": "2.10.7"
+  }
+}
