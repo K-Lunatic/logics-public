@@ -2,6 +2,25 @@
 
 일정·식단·물품 등 흩어진 기록을 한곳에 모으고, 웹 화면이나 채팅에서 조회하거나 수정하는 개인 도구입니다.
 
+## 새 환경에 설치
+
+macOS와 Windows에서는 Docker Desktop을 먼저 실행합니다. Windows는 WSL 2 기반 Linux 컨테이너를 사용합니다. Raspberry Pi는 64비트 OS와 Docker Engine 및 Compose 플러그인이 필요합니다. 세 환경 모두 Python 3을 사용합니다.
+
+```sh
+git clone https://github.com/K-Lunatic/logics-public.git
+cd logics-public
+python3 scripts/install-logics.py init
+```
+
+Windows PowerShell에서는 `python3` 대신 `py -3`을 사용합니다. `.env.logics-install`에 Google OAuth 웹 클라이언트의 `GOOGLE_CLIENT_ID`와 `GOOGLE_CLIENT_SECRET`을 입력합니다. 기본 콜백 주소는 `http://localhost:3000/api/auth/callback/google`입니다. MySQL 비밀번호와 앱 내부 키는 설치 프로그램이 생성합니다.
+
+```sh
+python3 scripts/install-logics.py up
+python3 scripts/install-logics.py status
+```
+
+설치한 기기에서 `http://localhost:3000`을 엽니다. 별도 기기에서 접속하는 Pi 구성에는 아래 라즈베리파이 설치 안내를 참고합니다. 설치 프로그램을 다시 실행해도 설정 파일과 MySQL 볼륨은 유지됩니다. 설치를 안내하는 에이전트에는 [Logics 설치 스킬](skills/logics-install/SKILL.md)을 사용할 수 있습니다.
+
 ## 라즈베리파이에서 실행하는 구성
 
 ```mermaid

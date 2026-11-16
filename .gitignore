@@ -30,3 +30,7 @@ repomix-output*
 .pnpm-store/
 backups/
 .migration/
+
+# Standalone installer configuration
+.env.logics-install
+__pycache__/

@@ -43,7 +43,7 @@ services:
       mysql:
         condition: service_healthy
     ports:
-      - "3000:3000"
+      - "${INK_WEB_BIND:-0.0.0.0}:${INK_WEB_PORT:-3000}:3000"
 
   migrate:
     profiles: ["migration"]
